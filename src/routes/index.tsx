@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { PurchaseToast } from "@/components/PurchaseToast";
 import "../styles/landing.css";
 
 const BASICO_BTN = "https://brandwise.mycartpanda.com/checkout/205918622:1";
@@ -85,6 +86,7 @@ function Index() {
     return () => { document.body.style.overflow = previous; };
   }, [modalOpen]);
   return <main className="landing">
+    <PurchaseToast />
     <nav className="topnav"><div className="topnav-inner"><div className="brand"><img src="/images/mascote.jpg" alt="Inventores Mirins" /><span>Inventores Mirins</span></div><a href="#oferta" className="nav-cta">Quero o Kit →</a></div></nav>
     <header className="hero"><div className="blob-a"/><div className="blob-b"/><div className="hero-inner">
       <img className="mascote" src="/images/mascote.jpg" alt="Mascote Inventores Mirins" />
