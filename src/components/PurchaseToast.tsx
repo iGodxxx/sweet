@@ -13,7 +13,7 @@ const AVATAR =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23eef2f4'/%3E%3Ccircle cx='40' cy='31' r='15' fill='%23f0c6a8'/%3E%3Cpath d='M19 69c2-15 11-23 21-23s19 8 21 23' fill='%23d98b6c'/%3E%3Cpath d='M24 30c1-13 8-20 17-20 10 0 16 7 16 19-6-5-11-7-18-7-5 0-10 3-15 8z' fill='%235b4636'/%3E%3C/svg%3E";
 
 export function PurchaseToast() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() =>\n    typeof window !== "undefined" &&\n    new URLSearchParams(window.location.search).get("previewToast") === "1"\n  );
   const [name, setName] = useState(NAMES[0]);
 
   useEffect(() => {
