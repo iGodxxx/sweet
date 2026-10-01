@@ -20,6 +20,10 @@ export function PurchaseToast() {
   const [name, setName] = useState(NAMES[0]);
 
   useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("previewToast") === "1") {
+      setVisible(false);
+      requestAnimationFrame(() => setVisible(true));
+    }
     let index = 0;
     let hideTimer: ReturnType<typeof setTimeout> | undefined;
     let intervalTimer: ReturnType<typeof setInterval> | undefined;
