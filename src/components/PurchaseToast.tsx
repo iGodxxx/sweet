@@ -97,7 +97,7 @@ export function PurchaseToast() {
           }
         }
       `}</style>
-      <div className={`purchase-toast${visible ? " show" : ""`} aria-live="polite">
+      <div className={`purchase-toast${visible ? " show" : ""}`} aria-live="polite">
         <img src={AVATAR} alt="" />
         <div>
           <strong>{name} comprou o Kit Mega Inventor</strong>
