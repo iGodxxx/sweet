@@ -25,15 +25,15 @@ const materials = [
   ["https://iili.io/CiIrtTX.md.png", "Por dentro do kit"],
 ];
 const projects = [
-  ["proj-robo-aranha.jpg", "Robô-aranha com palitos e motor"],
-  ["proj-carrinho-robotico.jpg", "Carrinho robótico movido a pilha"],
-  ["proj-barco-solar.jpg", "Barco a energia solar"],
-  ["proj-maquina-desenhar.jpg", "Máquina giratória de desenhar"],
-  ["proj-binoculo.jpg", "Binóculo reciclado de papelão"],
-  ["proj-slime.jpg", "Experimento científico: slime arco-íris"],
-  ["proj-leaozinho.jpg", "Leãozinho de prato reciclado"],
-  ["proj-densidade-cores.jpg", "Experimento de densidade e cores"],
-  ["proj-pistola-agua.jpg", "Pistola d'água de garrafa PET"],
+  ["https://iili.io/nEPEy6G.md.jpg", "Leãozinho de prato reciclado"],
+  ["https://iili.io/nEPEpGs.md.jpg", "Experimento de densidade e cores"],
+  ["https://iili.io/nEPEDZX.md.jpg", "Pistola d'água de garrafa PET"],
+  ["https://iili.io/nEPEtjt.md.jpg", "Robô-aranha com palitos e motor"],
+  ["https://iili.io/nEPGHFf.md.jpg", "Carrinho robótico movido a pilha"],
+  ["https://iili.io/nEPGJa4.md.jpg", "Barco a energia solar"],
+  ["https://iili.io/nEPG392.md.jpg", "Máquina giratória de desenhar"],
+  ["https://iili.io/nEPGFuS.md.jpg", "Binóculo reciclado de papelão"],
+  ["https://iili.io/nEPGft9.md.jpg", "Experimento científico: slime arco-íris"],
 ];
 const testimonials = [["wpp-aline.jpg", "Aline"], ["wpp-patricia.jpg", "Patrícia"], ["wpp-camila.jpg", "Camila"], ["wpp-juliana.jpg", "Juliana"], ["wpp-mariana.jpg", "Mariana"], ["wpp-renata.jpg", "Renata"]];
 const questions = [
