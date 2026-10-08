@@ -12,16 +12,16 @@ const MODAL_RECUSAR = "https://brandwise.mycartpanda.com/checkout/205918622:1?ci
 const trackingKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid", "gclid", "src", "sck"];
 
 const materials = [
-  ["mat-luzes-queijo-suico.jpg", "Projeto — Luzes de cordão de queijo suíço"],
-  ["mat-lanterna-papel.jpg", "Projeto — Lanterna de papel"],
-  ["mat-carrinho-nitro.jpg", "Lista de materiais — Carrinho Nitro"],
-  ["mat-lixeira-jacare.jpg", "Passo a passo — Lixeira Jacaré"],
-  ["mat-pote-do-ceu.jpg", "Experimento — Pote do céu e pôr do sol"],
-  ["mat-barco-solar.jpg", "Projeto — Barco solar"],
-  ["mat-foguete-efervescente.jpg", "Experimento — Foguete efervescente"],
-  ["mat-tabuleiro-jogo.jpg", "Passo a passo — Tabuleiro de jogo"],
-  ["mat-mao-mecanica.jpg", "Passo a passo — Mão mecânica"],
-  ["mat-montanha-russa.jpg", "Projeto — Montanha-russa de canudo"],
+  ["https://www.imglur.com/file/g81KEA", "Projeto — Luzes de cordão de queijo suíço"],
+  ["https://www.imglur.com/file/uJ6QUL", "Projeto — Lanterna de papel"],
+  ["https://www.imglur.com/file/rX67Gc", "Lista de materiais — Carrinho Nitro"],
+  ["https://www.imglur.com/file/RX7sFC", "Passo a passo — Lixeira Jacaré"],
+  ["https://www.imglur.com/file/HRjKbv", "Experimento — Pote do céu e pôr do sol"],
+  ["https://www.imglur.com/file/L4zxlB", "Projeto — Barco solar"],
+  ["https://www.imglur.com/file/5KtGK7", "Experimento — Foguete efervescente"],
+  ["https://www.imglur.com/file/fycRTM", "Passo a passo — Tabuleiro de jogo"],
+  ["https://www.imglur.com/file/OIbPVg", "Passo a passo — Mão mecânica"],
+  ["https://www.imglur.com/file/KgaDvA", "Projeto — Montanha-russa de canudo"],
 ];
 const projects = [
   ["proj-robo-aranha.jpg", "Robô-aranha com palitos e motor"],
@@ -61,7 +61,7 @@ function Marquee({ items, kind }: { items: string[][]; kind: "material" | "proje
   const trackClass = kind === "material" ? "material-track" : kind === "project" ? "project-track" : "testimonial-track";
   return <div className="marquee-wrap"><div className={`marquee-track ${trackClass}`}>
     {[...items, ...items].map(([file, caption], i) => <div className={cardClass} key={`${file}-${i}`} aria-hidden={i >= items.length ? true : undefined}>
-      <img src={`/images/${file}`} alt={kind === "testimonial" ? `Depoimento ${caption}` : caption} />
+      <img src={file.startsWith("http") ? file : `/images/${file}`} alt={kind === "testimonial" ? `Depoimento ${caption}` : caption} />
       <div className={kind === "testimonial" ? "wpp-name" : "cap"}>{caption}</div>
     </div>)}
   </div></div>;
