@@ -12,16 +12,17 @@ const MODAL_RECUSAR = "https://brandwise.mycartpanda.com/checkout/205918622:1?ci
 const trackingKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid", "gclid", "src", "sck"];
 
 const materials = [
-  ["https://www.imglur.com/file/g81KEA", "Projeto — Luzes de cordão de queijo suíço"],
-  ["https://www.imglur.com/file/uJ6QUL", "Projeto — Lanterna de papel"],
-  ["https://www.imglur.com/file/rX67Gc", "Lista de materiais — Carrinho Nitro"],
-  ["https://www.imglur.com/file/RX7sFC", "Passo a passo — Lixeira Jacaré"],
-  ["https://www.imglur.com/file/HRjKbv", "Experimento — Pote do céu e pôr do sol"],
-  ["https://www.imglur.com/file/L4zxlB", "Projeto — Barco solar"],
-  ["https://www.imglur.com/file/5KtGK7", "Experimento — Foguete efervescente"],
-  ["https://www.imglur.com/file/fycRTM", "Passo a passo — Tabuleiro de jogo"],
-  ["https://www.imglur.com/file/OIbPVg", "Passo a passo — Mão mecânica"],
-  ["https://www.imglur.com/file/KgaDvA", "Projeto — Montanha-russa de canudo"],
+  ["https://iili.io/CiIrzmX.md.png", "Projeto — Luzes de cordão de queijo suíço"],
+  ["https://iili.io/CiIrxet.md.png", "Projeto — Lanterna de papel"],
+  ["https://iili.io/CiIro7I.md.png", "Lista de materiais — Carrinho Nitro"],
+  ["https://iili.io/CiIrc22.md.png", "Passo a passo — Lixeira Jacaré"],
+  ["https://iili.io/CiIr0k7.md.png", "Experimento — Pote do céu e pôr do sol"],
+  ["https://iili.io/CiIr1p9.md.png", "Projeto — Barco solar"],
+  ["https://iili.io/CiIrGIe.md.png", "Experimento — Foguete efervescente"],
+  ["https://iili.io/CiIrN2V.md.png", "Passo a passo — Tabuleiro de jogo"],
+  ["https://iili.io/CiIr4Ev.md.png", "Passo a passo — Mão mecânica"],
+  ["https://iili.io/CiIrsYN.md.png", "Projeto — Montanha-russa de canudo"],
+  ["https://iili.io/CiIrtTX.md.png", "Por dentro do kit"],
 ];
 const projects = [
   ["proj-robo-aranha.jpg", "Robô-aranha com palitos e motor"],
