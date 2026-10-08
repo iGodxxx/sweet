@@ -62,7 +62,7 @@ function Marquee({ items, kind }: { items: string[][]; kind: "material" | "proje
   const trackClass = kind === "material" ? "material-track" : kind === "project" ? "project-track" : "testimonial-track";
   return <div className="marquee-wrap"><div className={`marquee-track ${trackClass}`}>
     {[...items, ...items].map(([file, caption], i) => <div className={cardClass} key={`${file}-${i}`} aria-hidden={i >= items.length ? true : undefined}>
-      <img src={file.startsWith("http") ? file : `/images/${file}`} alt={kind === "testimonial" ? `Depoimento ${caption}` : caption} />
+      <img src={file?.startsWith("http") ? file : `/images/${file ?? ""}`} alt={kind === "testimonial" ? `Depoimento ${caption}` : caption} />
       <div className={kind === "testimonial" ? "wpp-name" : "cap"}>{caption}</div>
     </div>)}
   </div></div>;
