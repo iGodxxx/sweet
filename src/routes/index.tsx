@@ -35,7 +35,7 @@ const projects = [
   ["https://iili.io/nEPGFuS.md.jpg", "Binóculo reciclado de papelão"],
   ["https://iili.io/nEPGft9.md.jpg", "Experimento científico: slime arco-íris"],
 ];
-const testimonials = [["wpp-aline.jpg", "Aline"], ["wpp-patricia.jpg", "Patrícia"], ["wpp-camila.jpg", "Camila"], ["wpp-juliana.jpg", "Juliana"], ["wpp-mariana.jpg", "Mariana"], ["wpp-renata.jpg", "Renata"]];
+const testimonials = [["depoimento-01.webp", "Depoimento de mãe"], ["depoimento-02.webp", "Depoimento de mãe"], ["depoimento-03.webp", "Depoimento de mãe"], ["depoimento-04.webp", "Depoimento de mãe"]];
 const questions = [
   ["É um produto físico ou digital?", "100% digital. Você recebe por e-mail logo após a confirmação do pagamento — sem espera de entrega, sem frete."],
   ["Preciso comprar materiais especiais?", "A maior parte é material simples que você já tem em casa: papelão, palitos, fita, potes. Os projetos de robótica usam também alguns componentes eletrônicos básicos (motor, pilha, fios) — fáceis de achar em loja de eletrônica ou online, com custo baixo."],
