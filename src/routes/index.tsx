@@ -68,6 +68,24 @@ function Marquee({ items, kind }: { items: string[][]; kind: "material" | "proje
   </div></div>;
 }
 
+function PriceCountdown() {
+  const [secondsLeft, setSecondsLeft] = useState(6 * 60 * 60 + 52 * 60 + 42);
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setSecondsLeft(current => Math.max(0, current - 1));
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const hours = String(Math.floor(secondsLeft / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((secondsLeft % 3600) / 60)).padStart(2, "0");
+  const seconds = String(secondsLeft % 60).padStart(2, "0");
+  return <div className="price-countdown" role="timer" aria-label={`Tempo restante da oferta: ${hours}:${minutes}:${seconds}`}>
+    <span className="price-countdown-fire">🔥</span>
+    <span>Preço de lançamento termina em</span>
+    <strong>{hours}:{minutes}:{seconds}</strong>
+  </div>;
+}
+
 function Index() {
   const [modalOpen, setModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -108,10 +126,10 @@ function Index() {
     </div><div className="stat-callout">💡 Crianças brasileiras passam em média <strong>4h+ por dia em telas</strong> — o quádruplo do recomendado pela OMS. A boa notícia? <strong>Isso muda quando existe uma alternativa mais interessante.</strong></div></div></section>
     <section className="offer" id="oferta"><div className="inner"><span className="eyebrow orange">🎟️ Oferta especial de lançamento</span><h2>Escolha o kit ideal para o seu filho</h2><p className="lede">Pagamento único, acesso vitalício, sem mensalidade. No combo, você vê exatamente quanto está economizando.</p>
       <div className="offer-grid">
-        <div className="offer-card basic-card"><div className="offer-body"><span className="plan-badge">Básico</span><div className="offer-name">Kit Robótica Mirim</div><div className="offer-tag">Só uma amostra: 20 projetos de robótica</div><div className="offer-price-wrap first-price"><div className="offer-por">R$ 17,90</div><div className="offer-desc">pagamento único · acesso vitalício</div></div><ul className="offer-items"><li><span className="ic">○</span>20 Projetos Robóticos (Guia Digital)</li><li><span className="ic">○</span>Acesso vitalício</li></ul><div className="warn-box">⚠️ Só o kit de Robótica. Sem reciclagem, sem ciência, sem artesanato. Sem os 3 bônus.</div><div className="offer-price-wrap"><Button type="button" variant="ghost" className="btn block gray" data-href={checkout(BASICO_BTN)} onClick={() => setModalOpen(true)}>Quero o Básico</Button><div className="offer-desc after-button">acesso imediato</div></div></div></div>
+        <div className="offer-card basic-card"><div className="offer-body"><span className="plan-badge">Básico</span><div className="offer-name">Kit Robótica Mirim</div><div className="offer-tag">Só uma amostra: 20 projetos de robótica</div><div className="offer-price-wrap first-price"><PriceCountdown /><div className="offer-por">R$ 17,90</div><div className="offer-desc">pagamento único · acesso vitalício</div></div><ul className="offer-items"><li><span className="ic">○</span>20 Projetos Robóticos (Guia Digital)</li><li><span className="ic">○</span>Acesso vitalício</li></ul><div className="warn-box">⚠️ Só o kit de Robótica. Sem reciclagem, sem ciência, sem artesanato. Sem os 3 bônus.</div><div className="offer-price-wrap"><Button type="button" variant="ghost" className="btn block gray" data-href={checkout(BASICO_BTN)} onClick={() => setModalOpen(true)}>Quero o Básico</Button><div className="offer-desc after-button">acesso imediato</div></div></div></div>
         <div className="offer-card premium-card"><div className="offer-body"><span className="ribbon">🔥 Mais vendido + bônus</span><div className="offer-name">Kit Mega Inventor</div><div className="offer-tag">Tudo do Básico + 3 kits extras + 3 bônus</div><div className="value-stack"><div className="value-label">Valor se fosse cobrado separado:</div>
           <div className="value-row"><span>Kit Robótica Mirim (20 projetos)</span><span className="v">R$ 47,00</span></div><div className="value-row"><span>Projetos com Materiais Recicláveis</span><span className="v">R$ 34,90</span></div><div className="value-row"><span>Experimentos Científicos</span><span className="v">R$ 34,90</span></div><div className="value-row"><span>Atividades com Papel e Fita</span><span className="v">R$ 34,90</span></div><div className="value-row star"><span>🎁 Manual Secreto do Agente de Espionagem</span><span className="v">R$ 19,90</span></div><div className="value-row star"><span>🎁 Mágica ou Ciência?</span><span className="v">R$ 19,90</span></div><div className="value-row star"><span>🎁 Desafio "Eu Faço Sozinho"</span><span className="v">R$ 19,90</span></div><div className="value-total"><span>Valor total:</span><span className="v">R$ 211,40</span></div></div>
-          <div className="offer-price-wrap"><div className="offer-desc before-price">Tudo isso, hoje, por:</div><div className="offer-por">R$ 34,90</div><div className="offer-desc">pagamento único · acesso vitalício</div><a href={checkout(COMBO_BTN)} className="btn block green pulse">Quero o Kit Mega Inventor por R$ 34,90</a><div className="offer-desc after-button">+ os 3 bônus que já estavam separados pra hoje</div></div>
+          <div className="offer-price-wrap"><PriceCountdown /><div className="offer-desc before-price">Tudo isso, hoje, por:</div><div className="offer-por">R$ 34,90</div><div className="offer-desc">pagamento único · acesso vitalício</div><a href={checkout(COMBO_BTN)} className="btn block green pulse">Quero o Kit Mega Inventor por R$ 34,90</a><div className="offer-desc after-button">+ os 3 bônus que já estavam separados pra hoje</div></div>
         </div></div>
       </div><div className="trust-icons"><div>🔒 Compra 100% segura</div><div>🎖️ 7 dias de garantia</div><div>💳 Pix ou cartão</div><div>⚡ Acesso imediato</div></div><div className="guarantee-strip"><span className="ic">🛡️</span><div><div className="t">Garantia incondicional de 7 dias</div><div className="d">Não gostou por qualquer motivo? Devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</div></div></div></div></section>
     <section className="testi"><div className="inner center"><span className="eyebrow orange">❤️ Relatos reais de quem já recebeu o kit</span><h2>O que as mães estão dizendo no WhatsApp</h2><p className="lede center">Prints reais de conversas com clientes — sem filtro, sem roteiro.</p></div><Marquee items={testimonials} kind="testimonial" /></section>
