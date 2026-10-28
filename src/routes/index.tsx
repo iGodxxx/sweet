@@ -47,9 +47,9 @@ const questions = [
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Inventores Mirins — Kit Completo de Criatividade Infantil" },
+    { title: "Inventores Kids — Kit Completo de Criatividade Infantil" },
     { name: "description", content: "Troque as horas de tela por horas criando. Robótica, ciência, reciclagem e artesanato para crianças de 4 a 12 anos." },
-    { property: "og:title", content: "Inventores Mirins — Kit de Robótica e Criatividade Infantil" },
+    { property: "og:title", content: "Inventores Kids — Kit de Robótica e Criatividade Infantil" },
     { property: "og:description", content: "Troque as horas de tela por horas criando. Robótica, ciência, reciclagem e artesanato para crianças de 4 a 12 anos." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
@@ -106,14 +106,14 @@ function Index() {
   }, [modalOpen]);
   return <main className="landing">
     <PurchaseToast />
-    <nav className="topnav"><div className="topnav-inner"><div className="brand"><img src="/images/mascote.jpg" alt="Inventores Mirins" /><span>Inventores Mirins</span></div><a href="#oferta" className="nav-cta">Quero o Kit →</a></div></nav>
+    <nav className="topnav"><div className="topnav-inner"><div className="brand"><img src="/images/mascote.jpg" alt="Inventores Kids" /><span>Inventores Kids</span></div><a href="#oferta" className="nav-cta">Quero o Kit →</a></div></nav>
     <header className="hero"><div className="blob-a"/><div className="blob-b"/><div className="hero-inner">
-      <img className="mascote" src="/images/mascote.jpg" alt="Mascote Inventores Mirins" />
+      <img className="mascote" src="/images/mascote.jpg" alt="Mascote Inventores Kids" />
       <span className="eyebrow gold">🔩 Kit Completo de Criatividade Infantil</span>
       <h1>Seu filho <span className="hl">larga o celular sozinho</span> — quando tem algo mais incrível para criar</h1>
       <p className="sub">Robótica, ciência, reciclagem e artesanato para crianças de 4 a 12 anos. Com materiais que você já tem em casa. Sem tela, sem complicação.</p>
       <div className="price-chip">A partir de <strong>R$ 17,90</strong> · pagamento único</div>
-      <div><a href="#materiais" className="btn">Quero conhecer os materiais da Inventores Mirins →</a></div>
+      <div><a href="#materiais" className="btn">Quero conhecer os materiais da Inventores Kids →</a></div>
       <p className="trust">🔒 Acesso imediato · Garantia de 7 dias · Pagamento seguro</p>
       <div className="hero-stats"><div><span className="n">140K+</span><span className="l">Seguidores</span></div><div><span className="n">4 em 1</span><span className="l">Kits no combo</span></div><div><span className="n">4–12</span><span className="l">Anos de idade</span></div><div><span className="n">100%</span><span className="l">Digital</span></div></div>
     </div></header>
@@ -135,7 +135,7 @@ function Index() {
     <section className="testi"><div className="inner center"><span className="eyebrow orange">❤️ Relatos reais de quem já recebeu o kit</span><h2>O que as mães estão dizendo no WhatsApp</h2><p className="lede center">Prints reais de conversas com clientes — sem filtro, sem roteiro.</p></div><Marquee items={testimonials} kind="testimonial" /></section>
     <section className="faq"><div className="inner-narrow"><div className="center faq-heading"><span className="eyebrow good">❓ Perguntas frequentes</span><h2>Ainda com dúvidas?</h2></div><div className="faq-list">{questions.map(([question, answer], i) => <div className={`faq-item${openFaq === i ? " open" : ""}`} key={question}><Button variant="ghost" type="button" className="faq-q" aria-expanded={openFaq === i} onClick={() => setOpenFaq(openFaq === i ? null : i)}><span>{question}</span><span className="chev">+</span></Button><div className="faq-a"><p>{answer}</p></div></div>)}</div></div></section>
     <section className="final"><div className="inner-narrow"><img src="/images/mascote.jpg" alt="mascote" /><h2>Seu filho merece descobrir o que consegue criar</h2><p className="lede center">Dê a ele a chance de construir, inventar, experimentar e se orgulhar do que fez com as próprias mãos. Comece hoje — o acesso é imediato.</p><a href={checkout(FINAL_BTN)} className="btn">🚀 Quero Criar com Meu Filho Agora</a><p className="trust">🔒 Compra segura · Garantia de 7 dias · Acesso imediato</p></div></section>
-    <footer><div>© 2026 Inventores Mirins · BrandWise · <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></div><div>Pagamento processado com segurança pela Cartpanda</div></footer>
+    <footer><div>© 2026 Inventores Kids · BrandWise · <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></div><div>Pagamento processado com segurança pela Cartpanda</div></footer>
     <div className={`modal-overlay${modalOpen ? " open" : ""}`} onClick={closeToBasic} aria-hidden="true" />
     <div className={`modal-box${modalOpen ? " open" : ""}`} role="dialog" aria-modal="true" aria-label="Antes de continuar: uma opção pode valer mais a pena" aria-hidden={!modalOpen}><div className="modal-card"><Button variant="ghost" type="button" className="modal-close" aria-label="Fechar" onClick={closeToBasic}>✕</Button><div className="modal-icon">⚠️</div><h3>Antes de continuar: uma opção pode valer mais a pena</h3><p className="lead">Você escolheu o <strong>Kit Robótica Mirim por R$ 17,90</strong>.</p><div className="modal-offer"><p>Por apenas <strong>+R$ 17,00</strong>, leve o <strong>Kit Mega Inventor por R$ 34,90</strong>, com <strong>4 kits completos + 3 bônus</strong>:</p><ul><li>🤖 Kit Robótica Mirim</li><li>♻️ Projetos com Materiais Recicláveis</li><li>🔬 Experimentos Científicos</li><li>✂️ Atividades com Papel e Fita</li><li>🎁 + 3 Bônus Exclusivos</li></ul></div><p className="modal-diff">São muito mais atividades por uma diferença de apenas R$ 17.</p><a href={checkout(MODAL_ACEITAR)} className="btn block">🚀 QUERO APROVEITAR O KIT COMPLETO</a><a href={checkout(MODAL_RECUSAR)} className="modal-reject" onClick={() => setModalOpen(false)}>Não, obrigado. Quero continuar apenas com o Kit Robótica Mirim.</a></div></div>
   </main>;
