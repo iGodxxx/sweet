@@ -58,7 +58,7 @@ export function PurchaseToast() {
           max-width: 290px;
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 0;
           background: #fff;
           border-left: 4px solid #f28b30;
           border-radius: 16px;
@@ -72,14 +72,6 @@ export function PurchaseToast() {
         .purchase-toast.show {
           transform: translateX(0);
           opacity: 1;
-        }
-        .purchase-toast img {
-          width: 38px;
-          height: 38px;
-          border-radius: 999px;
-          border: 2px solid #f4c542;
-          object-fit: cover;
-          flex-shrink: 0;
         }
         .purchase-toast strong {
           display: block;
@@ -101,7 +93,6 @@ export function PurchaseToast() {
         }
       `}</style>
       <div className={`purchase-toast${visible ? " show" : ""}`} aria-live="polite">
-        <img src={AVATAR} alt="" />
         <div>
           <strong>{name} comprou o Kit Mega Inventor</strong>
           <span>agora mesmo</span>
