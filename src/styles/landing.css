@@ -144,3 +144,9 @@ body{margin:0;}
 @keyframes pulseBtn{0%,100%{box-shadow:0 6px 22px rgba(46,155,107,0.4);transform:scale(1);}50%{box-shadow:0 0 0 10px rgba(46,155,107,0.18),0 10px 30px rgba(46,155,107,0.5);transform:scale(1.03);}}
 .landing .btn.pulse{animation:pulseBtn 1.8s ease-in-out infinite;}
 @media (prefers-reduced-motion:reduce){.landing .btn.pulse,.landing .marquee-track{animation:none;}}
+
+
+.landing .price-countdown{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;width:fit-content;max-width:100%;margin:0 auto 12px;padding:5px 12px;border-radius:999px;background:#FFF0E9;color:#E94F16;font-size:.72rem;font-weight:800;line-height:1.35;}
+.landing .price-countdown-fire{font-size:.8rem;}
+.landing .price-countdown strong{font-family:"Poppins",system-ui,sans-serif;font-size:.78rem;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap;color:#E94F16;}
+@media (max-width:420px){.landing .price-countdown{gap:4px;padding:5px 9px;font-size:.66rem;}.landing .price-countdown strong{font-size:.72rem;}}
